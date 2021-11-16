@@ -89,15 +89,17 @@ public class RegisterActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
-                                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                                        Intent intent = new Intent(RegisterActivity.this, StartActivity.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                         startActivity(intent);
                                         finish();
                                     }
                                 }
                             });
+
+                            Toast.makeText(RegisterActivity.this, "Zarejestrowano", Toast.LENGTH_LONG).show();
                         }else{
-                            Toast.makeText(RegisterActivity.this, "You can't register with this email or passowrd", Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegisterActivity.this, "You can't register with this email or passowrd", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
