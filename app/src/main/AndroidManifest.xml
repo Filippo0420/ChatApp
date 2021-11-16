@@ -11,13 +11,15 @@
         android:theme="@style/Theme.ChatApp">
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".StartActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".RegisterActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".StartActivity"/>
         <activity
             android:name=".StartActivity"
             android:exported="true">
