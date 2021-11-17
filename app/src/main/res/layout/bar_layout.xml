@@ -2,7 +2,10 @@
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar"
-    android:background="@color/design_default_color_primary_dark">
+    android:background="@color/design_default_color_primary_dark"
+    android:theme="@style/Base.CardView"
+    app:popupTheme="@style/MenuStyle">
 
 </androidx.appcompat.widget.Toolbar>
