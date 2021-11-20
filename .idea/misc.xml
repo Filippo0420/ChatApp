@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Filip Pawelec/AndroidStudioProjects/ChatApp/app/src/main/res/drawable/background_left.xml" value="0.3828125" />
+        <entry key="..\:/Users/Filip Pawelec/AndroidStudioProjects/ChatApp/app/src/main/res/drawable/background_right.xml" value="0.3828125" />
         <entry key="..\:/Users/Filip Pawelec/AndroidStudioProjects/ChatApp/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Filip Pawelec/AndroidStudioProjects/ChatApp/app/src/main/res/layout/activity_main.xml" value="0.2658514492753623" />
         <entry key="..\:/Users/Filip Pawelec/AndroidStudioProjects/ChatApp/app/src/main/res/layout/activity_message.xml" value="0.25" />
         <entry key="..\:/Users/Filip Pawelec/AndroidStudioProjects/ChatApp/app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="..\:/Users/Filip Pawelec/AndroidStudioProjects/ChatApp/app/src/main/res/layout/activity_start.xml" value="0.33" />
         <entry key="..\:/Users/Filip Pawelec/AndroidStudioProjects/ChatApp/app/src/main/res/layout/bar_layout.xml" value="0.33" />
+        <entry key="..\:/Users/Filip Pawelec/AndroidStudioProjects/ChatApp/app/src/main/res/layout/chat_item_left.xml" value="0.33" />
+        <entry key="..\:/Users/Filip Pawelec/AndroidStudioProjects/ChatApp/app/src/main/res/layout/chat_item_right.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Filip Pawelec/AndroidStudioProjects/ChatApp/app/src/main/res/layout/fragment_chats.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Filip Pawelec/AndroidStudioProjects/ChatApp/app/src/main/res/layout/fragment_users.xml" value="0.25" />
         <entry key="..\:/Users/Filip Pawelec/AndroidStudioProjects/ChatApp/app/src/main/res/layout/user_item.xml" value="0.36666666666666664" />
