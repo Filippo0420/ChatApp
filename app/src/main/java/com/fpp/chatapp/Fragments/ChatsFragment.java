@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.fpp.chatapp.Adapter.UserAdapter;
 import com.fpp.chatapp.Model.Chat;
+import com.fpp.chatapp.Model.Chatlist;
 import com.fpp.chatapp.Model.User;
 import com.fpp.chatapp.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -38,7 +39,7 @@ public class ChatsFragment extends Fragment {
     FirebaseUser fuser;
     DatabaseReference reference;
 
-    private List<String> usersList;
+    private List<Chatlist> usersList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,17 +61,11 @@ public class ChatsFragment extends Fragment {
                 usersList.clear();
 
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
-                    Chat chat = snapshot.getValue(Chat.class);
-
-                    if(chat.getSender().equals(fuser.getUid())){
-                        usersList.add(chat.getReciever());
-                    }
-                    if(chat.getReciever().equals(fuser.getUid())){
-                        usersList.add(chat.getSender());
-                    }
+                    Chatlist chatlist = snapshot.getValue(Chatlist.class);
+                    usersList.add(chatlist);
                 }
 
-                readChats();
+                chatList();
             }
 
             @Override
@@ -82,7 +77,7 @@ public class ChatsFragment extends Fragment {
         return view;
     }
 
-    private void readChats(){
+    private void chatList(){
         mUsers = new ArrayList<>();
 
         reference = FirebaseDatabase.getInstance().getReference("Users");
@@ -94,19 +89,9 @@ public class ChatsFragment extends Fragment {
 
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     User user = snapshot.getValue(User.class);
-
-                    // display 1 user from chats
-                    for(String id : usersList){
-                        if(user.getId().equals(id)){
-                            if(mUsers.size() != 0){
-                                for(User user1 : mUsers){
-                                    if(!user.getId().equals(user1.getId())){
-                                        mUsers.add(user);
-                                    }
-                                }
-                            }else{
-                                mUsers.add(user);
-                            }
+                    for(Chatlist chatlist : usersList){
+                        if(user.getId().equals(chatlist.getId())){
+                            mUsers.add(user);
                         }
                     }
                 }
